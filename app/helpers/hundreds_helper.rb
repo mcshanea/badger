@@ -7,7 +7,7 @@ module HundredsHelper
       
       #once we find the winner, we update their badge
       #users.each do |user|
-        
+       #badge = Badge.find
       #end
       
       hundred.ended = true
