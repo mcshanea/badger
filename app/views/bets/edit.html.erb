@@ -1,0 +1,24 @@
+<h1>Editing bet</h1>
+
+<% form_for(@bet) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :game %><br />
+    <%= f.text_field :game %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bet %> |
+<%= link_to 'Back', bets_path %>

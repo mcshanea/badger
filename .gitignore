@@ -1,0 +1,11 @@
+*.cache
+*.log
+*.pid
+tmp/**/*
+.DS_Store
+doc/api
+doc/app
+doc/plugins
+doc/*.dot
+db/*.sqlite3
+*.tmproj

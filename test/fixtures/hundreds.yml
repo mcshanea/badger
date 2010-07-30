@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  players: 1
+  end_time: 2010-07-30 09:46:21
+
+two:
+  title: MyString
+  players: 1
+  end_time: 2010-07-30 09:46:21

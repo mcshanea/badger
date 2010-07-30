@@ -1,0 +1,24 @@
+<h1>Editing hundred</h1>
+
+<% form_for(@hundred) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :players %><br />
+    <%= f.text_field :players %>
+  </p>
+  <p>
+    <%= f.label :end_time %><br />
+    <%= f.datetime_select :end_time %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @hundred %> |
+<%= link_to 'Back', hundreds_path %>

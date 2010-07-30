@@ -1,0 +1,29 @@
+<h1>Listing hundreds</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Players</th>
+    <th>End time</th>
+		<th>Ended</th>
+  </tr>
+
+<% @hundreds.each do |hundred| %>
+  <tr>
+    <td><%=h hundred.title %></td>
+    <td><%=h hundred.players %></td>
+    <td><%=h hundred.end_time %></td>
+		<td><%=h hundred.ended %></td>
+    <td><%= link_to 'Show', hundred %></td>
+    <td><%= link_to 'Edit', edit_hundred_path(hundred) %></td>
+    <td><%= link_to 'Destroy', hundred, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+
+	<%# Wouldn't do this here, should be placed in a background task %>
+	<% check_ending(hundred) %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hundred', new_hundred_path %>

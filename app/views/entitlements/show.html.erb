@@ -1,0 +1,23 @@
+<p>
+  <b>Badge:</b>
+  <%=h @entitlement.badge_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @entitlement.type %>
+</p>
+
+<p>
+  <b>Free bets:</b>
+  <%=h @entitlement.free_bets %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @entitlement.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_entitlement_path(@entitlement) %> |
+<%= link_to 'Back', entitlements_path %>

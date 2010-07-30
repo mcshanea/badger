@@ -1,0 +1,26 @@
+<h1>Listing entitlements</h1>
+
+<table>
+  <tr>
+    <th>Badge</th>
+    <th>Type</th>
+    <th>Free bets</th>
+    <th>Value</th>
+  </tr>
+
+<% @entitlements.each do |entitlement| %>
+  <tr>
+    <td><%=h entitlement.badge_id %></td>
+    <td><%=h entitlement.type %></td>
+    <td><%=h entitlement.free_bets %></td>
+    <td><%=h entitlement.value %></td>
+    <td><%= link_to 'Show', entitlement %></td>
+    <td><%= link_to 'Edit', edit_entitlement_path(entitlement) %></td>
+    <td><%= link_to 'Destroy', entitlement, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New entitlement', new_entitlement_path %>

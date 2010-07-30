@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  amount: 1.5
+  user_id: 1
+  game: MyString
+
+two:
+  amount: 1.5
+  user_id: 1
+  game: MyString

@@ -1,0 +1,9 @@
+<% form_tag '/login', :method => :post do -%>
+
+<p><label for="login">Username</label><br/>
+<%= text_field_tag 'login' %></p>
+
+<p><%= submit_tag 'Log in' %></p>
+
+<p><%= link_to "Sign Up", new_user_path %>
+<% end -%>

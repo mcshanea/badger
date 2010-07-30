@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  badge_id: 1
+  type: MyString
+  free_bets: 1
+  value: 1.5
+
+two:
+  badge_id: 1
+  type: MyString
+  free_bets: 1
+  value: 1.5

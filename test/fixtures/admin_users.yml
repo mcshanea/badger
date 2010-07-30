@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  login: MyString
+  first_name: MyString
+  last_name: MyString
+  points_earned: 1
+
+two:
+  login: MyString
+  first_name: MyString
+  last_name: MyString
+  points_earned: 1

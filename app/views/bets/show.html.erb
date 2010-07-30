@@ -1,0 +1,18 @@
+<p>
+  <b>Amount:</b>
+  <%=h @bet.amount %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @bet.user_id %>
+</p>
+
+<p>
+  <b>Game:</b>
+  <%=h @bet.game %>
+</p>
+
+
+<%= link_to 'Edit', edit_bet_path(@bet) %> |
+<%= link_to 'Back', bets_path %>

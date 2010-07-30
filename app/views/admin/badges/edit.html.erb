@@ -1,0 +1,24 @@
+<h1>Editing badge</h1>
+
+<% form_for(@badge, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :points_required %><br />
+    <%= f.text_field :points_required %>
+  </p>
+	<p>
+		<%= f.label :avatar %><br />
+		<%= f.file_field :avatar %>
+	</p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @badge %> |
+<%= link_to 'Back', badges_path %>

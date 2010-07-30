@@ -1,0 +1,47 @@
+<% content_for(:head) do -%>
+	<script src="http://js.pusherapp.com/1.4/pusher.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	    $(function(){
+			    var socket = new Pusher('6cbe614275897cd73062', 'hundreds_<%= @hundred.id %>');
+					server.bind('user-joined', function(login) {
+					  new Insertion.After("activity",'<li>' + login + ' just joined.</li>');
+					});
+					server.bind('new-bet', function(login) {
+					  new Insertion.After("activity",'<li>' + login + ' just placed a bet.</li>');
+					});
+	    })
+	</script>
+<% end -%>
+
+<p>
+  <b>Title:</b>
+  <%=h @hundred.title %>
+</p>
+
+<p>
+  <b>Players:</b>
+  <%=h @hundred.players %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%=h @hundred.end_time %>
+</p>
+
+<p id="bets_placed">
+	<%= bets_placed(@hundred.id) %>
+</p>
+
+<% form_remote_tag (:url => { :action => :place_bet }, :update => "place_bet") do -%>
+	<%= hidden_field_tag 'id', @hundred.id %>
+	<%= text_field_tag :guess %>
+  <div><%= submit_tag 'Place Bet' %></div>
+<% end -%>
+
+
+<ol id="#activity">
+</ol>
+
+
+<%= link_to 'Edit', edit_hundred_path(@hundred) %> |
+<%= link_to 'Back', hundreds_path %>

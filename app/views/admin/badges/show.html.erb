@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @badge.name %>
+</p>
+
+<p>
+  <b>Points required:</b>
+  <%=h @badge.points_required %>
+</p>
+
+<p>
+	<b>Avatar:</b>
+	<%= image_tag @badge.avatar.url(:thumb) %>
+</p>
+
+
+<%= link_to 'Edit', edit_badge_path(@badge) %> |
+<%= link_to 'Back', badges_path %>
